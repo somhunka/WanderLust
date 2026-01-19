@@ -1,0 +1,364 @@
+body{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container-fluid px-4{
+    flex: 1;
+}
+
+/*Navbar---->*/
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color: #222222 ! important;
+}
+
+
+/*Footer--->*/
+footer {
+    background-color: #f7f7f7;
+    border-top: 1px solid #e5e5e5;
+    padding: 25px 0;
+    font-family: "Airbnb Cereal", sans-serif;
+}
+
+.f-info {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 24px;
+
+    display: flex;
+    flex-direction: column;   /* Stack items vertically */
+    justify-content: center;
+    align-items: center;      /* Center horizontally */
+    text-align: center;
+    gap: 15px;
+
+    color: #484848;
+    font-size: 14px;
+}
+
+/* --- Social Icons --- */
+.f-info-socials i {
+    font-size: 22px;
+    margin: 0 12px;
+    cursor: pointer;
+    color: #717171;
+    transition: color 0.2s ease;
+}
+
+.f-info-socials i:hover {
+    color: #000;
+}
+
+/* --- Brand Text --- */
+.f-info-brand {
+    font-weight: 500;
+}
+
+/* --- Footer Links --- */
+.f-info-links a {
+    text-decoration: none;
+    margin: 0 12px;
+    color: #717171;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.f-info-links a:hover {
+    color: #000;
+}
+
+
+/*Cards----->*/
+
+
+/* Airbnb-style heading */
+.page-heading {
+    text-align: center;
+    width: 100%;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 30px 0;
+}
+
+/* Center heading on smaller screens */
+@media (max-width: 768px) {
+    .page-heading {
+        text-align: center;
+        padding-left: 0;
+        font-size: 26px;
+    }
+}
+
+
+/* GRID – 3 cards per row */
+.listing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;                   /* Airbnb uses ~24-30px gap */
+    padding: 20px 40px;
+}
+
+/* Remove underline + default link colors */
+.listing-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* CARD WRAPPER (Airbnb style) */
+.listing-card {
+    display: block;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover effect like Airbnb */
+.listing-card:hover {
+    transform: scale(1.03);
+}
+
+/* IMAGE WRAPPER (Rounded top corners exactly like Airbnb) */
+.card-img-wrapper {
+    width: 100%;
+    height: 260px;                       /* taller images like Airbnb */
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* IMAGE style — EXACT Airbnb effect */
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+/* Airbnb zoom image on hover */
+.listing-card:hover .card-img {
+    transform: scale(1.09);
+}
+
+/* CARD INFO */
+.card-info {
+    padding: 10px 4px;
+}
+
+/* Title style like Airbnb */
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* Price style (bold and simple like Airbnb) */
+.card-price {
+    font-size: 15px;
+    color: #000;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* RESPONSIVE GRID */
+@media (max-width: 992px) {
+    .listing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .listing-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* New Page */
+
+.add-btn{
+   background-color: #fe424d !important; 
+   border: none !important;
+}
+
+
+/* Show Page */
+
+.show-image{
+    height: 30vh;
+    
+}
+
+/* ===== LISTING DETAILS PAGE ===== */
+
+/* Page heading */
+h3 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 28px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+/* Main card styling */
+.show-card {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.12);
+    background: #fff;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+/* Hover effect */
+.show-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+}
+
+/* Big top image */
+.show-image {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+/* Card text */
+.show-card .card-body {
+    padding: 20px 22px;
+}
+
+.show-card .card-text {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.show-card .card-text b {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+}
+
+/* Buttons area */
+.btns {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* Edit & Delete Buttons */
+.edit-btn,
+.btns button {
+    padding: 10px 0;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    transition: background .2s ease, opacity .2s ease;
+}
+
+/* Edit button look */
+.edit-btn {
+    background: #222;
+    color: #fff;
+}
+
+.edit-btn:hover {
+    opacity: 0.85;
+}
+
+/* Delete button look */
+.btns button {
+    background: #d9534f;
+    color: #fff;
+}
+
+.btns button:hover {
+    background: #c9302c;
+}
+
+/* Center buttons on mobile */
+@media (max-width: 768px) {
+    .btns {
+        text-align: center;
+    }
+
+    .btns .col-2 {
+        width: 60%;
+        margin: 10px auto;
+    }
+}
+
+
+/* ===== REVIEW CARDS (SHOW PAGE) ===== */
+
+.review-card {
+    border: none;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.14);
+}
+
+/* Card body spacing */
+.review-card .card-body {
+    padding: 18px 22px;
+}
+
+/* Review title */
+.review-card h6 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* Rating badge */
+.review-card .badge {
+    background-color: #fe424d !important; /* Airbnb red */
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+/* Review text */
+.review-card .card-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Review date */
+.review-card small {
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* Delete review button */
+.delete-review-btn {
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.delete-review-btn:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+
